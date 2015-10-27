@@ -1,0 +1,22 @@
+<ion-navbar *navbar secondary>
+  <a menu-toggle *ng-if="!post">
+    <icon menu></icon>
+  </a>
+  <ion-title>New Post</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-list>
+
+    <ion-input floating-label>
+      <ion-label>Title</ion-label>
+      <input type="text" value="">
+    </ion-input>
+
+    <ion-input floating-label>
+      <ion-label>Description</ion-label>
+      <input type="text" value="">
+    </ion-input>
+
+  </ion-list>
+</ion-content>

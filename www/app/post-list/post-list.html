@@ -1,0 +1,23 @@
+<ion-navbar *navbar danger>
+  <a menu-toggle>
+    <icon menu></icon>
+  </a>
+  <ion-title>Posts</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-card *ng-for="#post of posts" (click)="showPostDetail(post)">
+    <img src="img/{{post.image}}"/>
+    <ion-card-content>
+      <h2 class="card-title">
+        {{post.title}}
+      </h2>
+      <p>
+        {{post.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <button fab fab-right fab-bottom primary class="disable-hover icon-only" (click)="showPostForm()">
+    <icon add="" role="img" class="ion-md-add" aria-label="add"></icon>
+  </button>
+</ion-content>

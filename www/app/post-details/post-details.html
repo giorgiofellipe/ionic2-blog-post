@@ -1,0 +1,16 @@
+<ion-navbar *navbar secondary>
+  <a menu-toggle *ng-if="!post">
+    <icon menu></icon>
+  </a>
+  <ion-title>{{post.title}}</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <div *ng-if="post" class="selection">
+    <h1>{{post.title}}</h1>
+    <img src="img/{{post.image}}">
+    <p>
+      {{post.description}}
+    </p>
+  </div>
+</ion-content>
